@@ -10,9 +10,9 @@
     "build": "tsc && vite build",
     "deploy": "node scripts/deploy.js",
     "dev": "vite",
-    "format": "prettier src --write",
-    "format:check": "prettier src --check",
-    "lint": "eslint src",
+    "format": "prettier src scripts --write",
+    "format:check": "prettier src scripts --check",
+    "lint": "eslint src scripts",
     "preview": "vite preview",
     "serve": "vite serve",
     "test": "echo 'No tests yet'"
