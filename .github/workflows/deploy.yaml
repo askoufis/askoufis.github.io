@@ -1,0 +1,33 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    name: Publish & Deploy
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v2.2.2
+
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@main
+        with:
+          node-version: 16.x
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Deploy site
+        run: pnpm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
