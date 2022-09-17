@@ -48,6 +48,10 @@ const publishConfig = {
   repo: repoUrl.replace('https://', `https://git:${GITHUB_TOKEN}@`),
   logger: log,
   tag: createGitTag(),
+  user: {
+    name: 'github-actions[bot]',
+    email: 'github-actions[bot]@users.noreply.github.com',
+  },
 };
 
 const publishCallback = (err) => {
