@@ -32,8 +32,8 @@ jobs:
 
       - name: Deploy site
         run: |
-          git config user.name "Adam Skoufis"
-          git config user.email "${{ secrets.PERSONAL_EMAIL}}"
+          git config user.name "github-actions-bot"
+          git config user.email "support+actions@github.com"
           pnpm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

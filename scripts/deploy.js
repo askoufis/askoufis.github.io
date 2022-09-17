@@ -44,7 +44,7 @@ const log = (message) => {
 };
 
 const publishConfig = {
-  repo: repoUrl.replace('https://', `https://${GITHUB_TOKEN}@`),
+  repo: repoUrl.replace('https://', `https://git:${GITHUB_TOKEN}@`),
   logger: log,
   tag: createGitTag(),
 };
