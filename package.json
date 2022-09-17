@@ -7,7 +7,7 @@
     "url": "https://github.com/askoufis/askoufis.github.io"
   },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "deploy": "node scripts/deploy.js",
     "dev": "vite",
     "format": "prettier src scripts --write",
@@ -15,7 +15,8 @@
     "lint": "eslint src scripts",
     "preview": "vite preview",
     "serve": "vite serve",
-    "test": "echo 'No tests yet'"
+    "test": "echo 'No tests yet'",
+    "tsc": "tsc"
   },
   "dependencies": {
     "react": "^18.2.0",

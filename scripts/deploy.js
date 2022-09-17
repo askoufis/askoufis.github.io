@@ -1,8 +1,13 @@
+// eslint-disable no-console
 import path from 'path';
 import { publish } from 'gh-pages';
-import packageJson from '../package.json' assert { type: 'json' };
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const packageJson = require('../package.json');
 
 const deployDirectory = path.join(path.dirname(import.meta.url), '../dist');
+console.log(`Deploying files from ${deployDirectory}`);
 
 const repoUrl = packageJson.repository.url;
 if (!repoUrl) {
@@ -35,7 +40,6 @@ const createGitTag = () => {
 const tokenRegex = new RegExp(GITHUB_TOKEN, 'g');
 
 const log = (message) => {
-  // eslint-disable-next-line no-console
   console.log(message.replace(tokenRegex, '[GITHUB_TOKEN]'));
 };
 

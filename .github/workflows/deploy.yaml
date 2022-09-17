@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  release:
-    name: Publish & Deploy
+  deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     env:
       CI: true
@@ -26,6 +26,9 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm i
+
+      - name: Build site
+        run: pnpm build
 
       - name: Deploy site
         run: pnpm run deploy
