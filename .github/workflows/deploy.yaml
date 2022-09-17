@@ -31,6 +31,9 @@ jobs:
         run: pnpm build
 
       - name: Deploy site
-        run: pnpm run deploy
+        run: |
+          git config user.name "Adam Skoufis"
+          git config user.email "${{ secrets.PERSONAL_EMAIL}}"
+          pnpm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
