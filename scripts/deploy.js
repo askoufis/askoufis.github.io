@@ -6,7 +6,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const packageJson = require('../package.json');
 
-const deployDirectory = path.join(path.dirname(import.meta.url), '../dist');
+const deployDirectory = path.join(process.cwd(), 'dist');
 console.log(`Deploying files from ${deployDirectory}`);
 
 const repoUrl = packageJson.repository.url;
