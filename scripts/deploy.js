@@ -1,3 +1,4 @@
+import path from 'path';
 import { publish } from 'gh-pages';
 
 const deployDirectory = path.join(path.dirname(import.meta.url), '../dist');
