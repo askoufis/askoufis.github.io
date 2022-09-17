@@ -1,9 +1,10 @@
 import path from 'path';
 import { publish } from 'gh-pages';
+import packageJson from '../package.json';
 
 const deployDirectory = path.join(path.dirname(import.meta.url), '../dist');
 
-const repoUrl = require('../package.json').repository.url;
+const repoUrl = packageJson.repository.url;
 if (!repoUrl) {
   throw new Error('Repo URL not found in package.json');
 }
