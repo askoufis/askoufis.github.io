@@ -1,6 +1,6 @@
 import path from 'path';
 import { publish } from 'gh-pages';
-import packageJson from '../package.json';
+import packageJson from '../package.json' assert { type: 'json' };
 
 const deployDirectory = path.join(path.dirname(import.meta.url), '../dist');
 
