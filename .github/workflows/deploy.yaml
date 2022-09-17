@@ -31,6 +31,9 @@ jobs:
         run: pnpm build
 
       - name: Deploy site
-        run: pnpm run deploy
+        run: |
+          ls ./
+          ls ./dist
+          pnpm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
