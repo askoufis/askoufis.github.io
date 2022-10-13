@@ -30,6 +30,6 @@ jobs:
         run: pnpm build:site
 
       - name: Deploy site
-        run: pnpm run deploy
+        run: pnpm run deploy:site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
