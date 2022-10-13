@@ -27,7 +27,7 @@ jobs:
         run: pnpm i
 
       - name: Build site
-        run: pnpm build
+        run: pnpm build:site
 
       - name: Deploy site
         run: pnpm run deploy
