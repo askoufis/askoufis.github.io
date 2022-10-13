@@ -6,34 +6,22 @@
   "repository": {
     "url": "https://github.com/askoufis/askoufis.github.io"
   },
-  "scripts": {
-    "build": "vite build",
-    "deploy": "node scripts/deploy.js",
-    "dev": "vite",
-    "format": "prettier src scripts --write",
-    "format:check": "prettier src scripts --check",
-    "lint": "eslint src scripts",
-    "preview": "vite preview",
-    "serve": "vite serve",
-    "test": "echo 'No tests yet'",
-    "tsc": "tsc"
+  "engines": {
+    "node": "16"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "scripts": {
+    "build:site": "pnpm --filter 'site' build",
+    "dev": "pnpm --filter 'site' dev",
+    "deploy": "pnpm --filter 'site' deploy",
+    "format:check": "prettier src scripts --check",
+    "lint": "turbo run eslint",
+    "format": "turbo run format",
+    "tsc": "turbo run tsc"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "@vitejs/plugin-react": "^2.0.1",
-    "eslint": "^8.23.1",
-    "eslint-config-seek": "^10.0.0",
+    "@manypkg/cli": "^0.19.2",
     "gh-pages": "^4.0.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.7"
+    "turbo": "^1.5.6"
   },
   "packageManager": "pnpm@7.11.0",
   "volta": {

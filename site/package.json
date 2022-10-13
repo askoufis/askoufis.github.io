@@ -1,0 +1,42 @@
+{
+  "name": "site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/askoufis/askoufis.github.io"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.5",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "eslint-config-custom": "workspace:*",
+    "eslint": "^8.23.1",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1",
+    "system": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.8.4",
+    "vite": "^3.0.7"
+  },
+  "scripts": {
+    "build": "vite build",
+    "deploy": "node scripts/deploy.js",
+    "dev": "vite",
+    "preview": "vite preview",
+    "serve": "vite serve",
+    "eslint": "eslint --ignore-path ../.eslintignore .",
+    "format": "eslint --ignore-path ../.eslintignore --fix . && prettier --ignore-path ../.prettierignore packages scripts --write",
+    "format:check": "prettier --ignore-path ../.prettierignore --list-different .",
+    "tsc": "tsc"
+  },
+  "packageManager": "pnpm@7.11.0",
+  "volta": {
+    "node": "16.17.0"
+  }
+}

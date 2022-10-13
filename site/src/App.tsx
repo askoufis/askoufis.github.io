@@ -2,6 +2,7 @@ import { useState } from 'react';
 // @ts-expect-error
 import reactLogo from './assets/react.svg';
 import './App.css';
+import { Box } from 'system';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ const App = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+        <Box />
       </div>
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more. A change.
