@@ -16,6 +16,7 @@
     "format:check": "turbo run format:check",
     "lint": "turbo run eslint",
     "format": "turbo run format",
+    "test": "echo 'no tests yet'",
     "tsc": "turbo run tsc"
   },
   "devDependencies": {
