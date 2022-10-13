@@ -6,7 +6,7 @@
     "tsc": {
       "outputs": []
     },
-    "format": {
+    "format:check": {
       "outputs": []
     }
   }

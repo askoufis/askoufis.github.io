@@ -30,13 +30,9 @@
     "dev": "vite",
     "preview": "vite preview",
     "serve": "vite serve",
-    "eslint": "eslint --ignore-path ../.eslintignore .",
-    "format": "eslint --ignore-path ../.eslintignore --fix . && prettier --ignore-path ../.prettierignore packages scripts --write",
-    "format:check": "prettier --ignore-path ../.prettierignore --list-different .",
+    "eslint": "eslint --ignore-path ../.eslintignore '**/*.{ts,tsx}'",
+    "format": "eslint --ignore-path ../.eslintignore --fix '**/*.{ts,tsx}' && prettier --ignore-path ../.prettierignore packages scripts --write",
+    "format:check": "prettier --ignore-path ../.prettierignore --list-different '**/*.{ts,tsx}'",
     "tsc": "tsc"
-  },
-  "packageManager": "pnpm@7.11.0",
-  "volta": {
-    "node": "16.17.0"
   }
 }

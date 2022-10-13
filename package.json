@@ -13,7 +13,7 @@
     "build:site": "pnpm --filter 'site' build",
     "dev": "pnpm --filter 'site' dev",
     "deploy:site": "pnpm --filter 'site' run deploy",
-    "format:check": "prettier src scripts --check",
+    "format:check": "turbo run format:check",
     "lint": "turbo run eslint",
     "format": "turbo run format",
     "tsc": "turbo run tsc"

@@ -14,9 +14,9 @@
     "typescript": "^4.8.4"
   },
   "scripts": {
-    "eslint": "eslint --ignore-path ../../.eslintignore .",
-    "format": "eslint --ignore-path ../../.eslintignore --fix . && prettier --ignore-path ../.prettierignore packages scripts --write",
-    "format:check": "prettier --ignore-path ../../.prettierignore --list-different .",
+    "eslint": "eslint --ignore-path ../../.eslintignore '**/*.{ts,tsx}'",
+    "format": "eslint --ignore-path ../../.eslintignore --fix '**/*.{ts,tsx}' && prettier --ignore-path ../.prettierignore packages scripts --write",
+    "format:check": "prettier --ignore-path ../../.prettierignore --list-different '**/*.{ts,tsx}'",
     "tsc": "tsc"
   }
 }
