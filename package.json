@@ -12,6 +12,7 @@
   "scripts": {
     "build:site": "pnpm --filter 'site' build",
     "dev": "pnpm --filter 'site' dev",
+    "preview": "pnpm --filter 'site' preview",
     "deploy:site": "pnpm --filter 'site' run deploy",
     "eslint": "eslint .",
     "lint": "pnpm run tsc && pnpm run eslint && pnpm format:check",
