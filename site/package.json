@@ -15,13 +15,8 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
-    "eslint-config-custom": "workspace:*",
-    "eslint": "^8.23.1",
     "gh-pages": "^4.0.0",
-    "prettier": "^2.7.1",
     "system": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.8.4",
     "vite": "^3.0.7"
   },
   "scripts": {
@@ -29,10 +24,6 @@
     "deploy": "node scripts/deploy.js",
     "dev": "vite",
     "preview": "vite preview",
-    "serve": "vite serve",
-    "eslint": "eslint --ignore-path ../.eslintignore '**/*.{ts,tsx}'",
-    "format": "eslint --ignore-path ../.eslintignore --fix '**/*.{ts,tsx}' && prettier --ignore-path ../.prettierignore packages scripts --write",
-    "format:check": "prettier --ignore-path ../.prettierignore --list-different '**/*.{ts,tsx}'",
-    "tsc": "tsc"
+    "serve": "vite serve"
   }
 }

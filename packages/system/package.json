@@ -5,18 +5,5 @@
   "dependencies": {
     "@types/react": "^18.0.17",
     "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "eslint": "^8.23.1",
-    "prettier": "^2.7.1",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.8.4"
-  },
-  "scripts": {
-    "eslint": "eslint --ignore-path ../../.eslintignore '**/*.{ts,tsx}'",
-    "format": "eslint --ignore-path ../../.eslintignore --fix '**/*.{ts,tsx}' && prettier --ignore-path ../.prettierignore packages scripts --write",
-    "format:check": "prettier --ignore-path ../../.prettierignore --list-different '**/*.{ts,tsx}'",
-    "tsc": "tsc"
   }
 }

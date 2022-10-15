@@ -13,16 +13,21 @@
     "build:site": "pnpm --filter 'site' build",
     "dev": "pnpm --filter 'site' dev",
     "deploy:site": "pnpm --filter 'site' run deploy",
-    "format:check": "turbo run format:check",
-    "lint": "turbo run eslint",
-    "format": "turbo run format",
+    "eslint": "eslint .",
+    "lint": "pnpm run tsc && pnpm run eslint && pnpm format:check",
+    "format": "eslint . --fix && prettier --write .",
+    "format:check": "prettier --list-different .",
     "test": "echo 'no tests yet'",
-    "tsc": "turbo run tsc"
+    "tsc": "tsc"
   },
   "devDependencies": {
-    "@manypkg/cli": "^0.19.2",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
     "gh-pages": "^4.0.0",
-    "turbo": "^1.5.6"
+    "eslint": "^8.23.1",
+    "eslint-config-seek": "^10.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
   },
   "packageManager": "pnpm@7.11.0",
   "volta": {
