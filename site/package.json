@@ -12,6 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "deploy": "tsx ./scripts/deploy.ts"
   },
   "dependencies": {

@@ -12,7 +12,7 @@
     "preview": "pnpm --filter 'site' preview",
     "deploy:site": "pnpm --filter 'site' run deploy",
     "eslint": "eslint --cache .",
-    "lint": "pnpm run tsc && pnpm run eslint && pnpm format:check",
+    "lint": "pnpm --filter 'site' check && pnpm run tsc && pnpm run eslint && pnpm format:check",
     "format": "eslint --cache . --fix && prettier --cache --write . '**/*.astro'",
     "format:check": "prettier --cache --list-different . '**/*.astro'",
     "test": "echo 'no tests yet'",

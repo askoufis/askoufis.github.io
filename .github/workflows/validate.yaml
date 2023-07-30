@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Typecheck, eslint and prettier
+      - name: Astro check, tsc, eslint and prettier
         run: pnpm lint
 
       - name: Test
