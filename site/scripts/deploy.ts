@@ -1,9 +1,6 @@
 import path from 'path';
 import { publish } from 'gh-pages';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-const packageJson = require('../package.json');
+import packageJson from '../package.json';
 
 const deployDirectory = path.join(process.cwd(), 'dist');
 // eslint-disable-next-line no-console
@@ -39,7 +36,7 @@ const createGitTag = () => {
 
 const tokenRegex = new RegExp(GITHUB_TOKEN, 'g');
 
-const log = (message) => {
+const log = (message: string) => {
   // eslint-disable-next-line no-console
   console.log(message.replace(tokenRegex, '[GITHUB_TOKEN]'));
 };
@@ -54,7 +51,9 @@ const publishConfig = {
   },
 };
 
-const publishCallback = (err) => {
+type PublishCallback = Parameters<typeof publish>[2];
+
+const publishCallback: PublishCallback = (err) => {
   if (err) {
     log('Deployment error');
     log(JSON.stringify(err));
