@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
+
+import * as styles from './Card.css';
 ---
 
 <li class='link-card'>
@@ -18,6 +20,7 @@ const { href, title, body } = Astro.props;
       {body}
     </p>
   </a>
+  <p class={styles.cardStyle}>SomeText</p>
 </li>
 <style>
   .link-card {
