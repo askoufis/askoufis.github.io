@@ -30,6 +30,8 @@ jobs:
         run: pnpm build:site
 
       - name: Deploy site
-        run: pnpm run deploy:site
+        # Create a `.nojekyll` file so the `_astro` folder gets deployed
+        # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+        run: touch ./site/dist/.nojekyll && pnpm run deploy:site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
