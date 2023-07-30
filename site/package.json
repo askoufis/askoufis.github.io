@@ -15,6 +15,7 @@
     "deploy": "tsx ./scripts/deploy.ts"
   },
   "dependencies": {
+    "@astrojs/markdoc": "^0.4.4",
     "astro": "^2.9.6"
   },
   "devDependencies": {

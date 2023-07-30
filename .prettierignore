@@ -2,3 +2,5 @@ dist/
 node_modules/
 pnpm-lock.yaml
 pnpm-workspace.yaml
+site/src/env.d.ts
+.astro/

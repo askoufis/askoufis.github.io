@@ -1,2 +1,2 @@
-// eslint-disable-next-line spaced-comment
+/// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />

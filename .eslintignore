@@ -1,3 +1,6 @@
 dist/
 node_modules/
 *.astro
+astro.config.mjs
+site/src/env.d.ts
+.astro/
