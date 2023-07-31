@@ -16,8 +16,12 @@
     "deploy": "tsx ./scripts/deploy.ts"
   },
   "dependencies": {
+    "@askoufis/system": "workspace:*",
     "@astrojs/markdoc": "^0.4.4",
-    "astro": "^2.9.6"
+    "@astrojs/react": "^2.2.1",
+    "astro": "^2.9.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/gh-pages": "^3.2.1",
