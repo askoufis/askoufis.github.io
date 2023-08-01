@@ -4,7 +4,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./css": "./src/css/index.ts"
+    "./css": "./src/css/index.ts",
+    "./reset": "./src/reset/index.ts"
   },
   "dependencies": {
     "@types/react": "^18.0.17",
