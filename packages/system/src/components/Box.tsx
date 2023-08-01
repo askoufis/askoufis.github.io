@@ -1,6 +1,6 @@
 import { createElement, type ElementType, type AllHTMLAttributes } from 'react';
 import clsx from 'clsx';
-import * as resetStyles from '../css/reset.css';
+import * as resetStyles from '../reset/reset.css';
 
 interface BoxProps extends Omit<AllHTMLAttributes<HTMLElement>, 'className'> {
   component?: ElementType;

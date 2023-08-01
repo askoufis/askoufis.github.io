@@ -1,5 +1,16 @@
 ---
-import { Box } from '@askoufis/system';
+import { Heading } from '@askoufis/system';
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  slug: string;
+}
+
+const { title, slug } = Astro.props;
 ---
 
-<Box component='body'><slot /></Box>
+<Base title={title}>
+  <Heading level={1} id={slug}>{title}</Heading>
+  <slot />
+</Base>

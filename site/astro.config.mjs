@@ -7,6 +7,6 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [markdoc(), react()],
   vite: {
-    plugins: [vanillaExtractPlugin({ identifiers: 'short' })],
+    plugins: [vanillaExtractPlugin()],
   },
 });

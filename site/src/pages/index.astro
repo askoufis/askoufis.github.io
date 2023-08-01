@@ -6,7 +6,7 @@ const blogEntries = (await getCollection('blog')).map((entry) => ({
 }));
 ---
 
-<h1>Welcome to my website</h1>
+<h1 id='Welcome'>Welcome to my website</h1>
 {
   blogEntries.map((entry) => (
     <>
