@@ -1,6 +1,7 @@
 ---
 import '@askoufis/system/reset';
 import { Box } from '@askoufis/system';
+import { theme } from '@askoufis/system/css';
 
 interface Props {
   title: string;
@@ -19,7 +20,7 @@ const { title } = Astro.props;
       rel='stylesheet'
     />
   </head>
-  <Box component='body'><slot /></Box>
+  <Box component='body' className={theme}><slot /></Box>
 
 
 </html>
