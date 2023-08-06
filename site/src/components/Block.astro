@@ -1,0 +1,13 @@
+---
+import { Box } from '@askoufis/system';
+import { block } from './Block.css';
+import type { ElementType } from 'react';
+
+interface Props {
+  component?: ElementType;
+}
+
+const { component = 'div' } = Astro.props;
+---
+
+<Box component={component} className={block}><slot /></Box>

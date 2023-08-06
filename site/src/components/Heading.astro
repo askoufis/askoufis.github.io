@@ -1,12 +1,16 @@
 ---
+import type { ComponentProps } from 'react';
 import { Heading as SystemHeading } from '@askoufis/system';
+import Block from './Block.astro';
 
 interface Props {
-  level: 1 | 2 | 3 | 4 | 5 | 6;
+  level: ComponentProps<typeof SystemHeading>['level'];
   id: string;
 }
 
 const { level, id } = Astro.props;
 ---
 
-<SystemHeading level={level} id={id}><slot /></SystemHeading>
+<Block component="h1">
+  <SystemHeading component="span" level={level} id={id}><slot /></SystemHeading>
+</Block>

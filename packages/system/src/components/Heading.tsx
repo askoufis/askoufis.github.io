@@ -1,10 +1,11 @@
-import type { ReactNode } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { Box } from './Box';
+import * as typographyStyles from './typography.css';
 
-type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+type HeadingLevel = 1 | 2 | 3 | 4;
 
 interface HeadingProps {
-  component?: `h${HeadingLevel}`;
+  component?: ElementType;
   level: HeadingLevel;
   children: ReactNode;
   id?: string;
@@ -15,8 +16,6 @@ const componentFromLevel: { [Level in HeadingLevel]: `h${Level}` } = {
   2: 'h2',
   3: 'h3',
   4: 'h4',
-  5: 'h5',
-  6: 'h6',
 };
 
 export const Heading = ({
@@ -28,7 +27,11 @@ export const Heading = ({
   const component = rawComponent || componentFromLevel[level];
 
   return (
-    <Box component={component} id={id}>
+    <Box
+      component={component}
+      id={id}
+      className={[typographyStyles.font, typographyStyles.heading[level]]}
+    >
       {children}
     </Box>
   );

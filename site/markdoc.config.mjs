@@ -8,7 +8,7 @@ export default defineMarkdocConfig({
     },
     paragraph: {
       ...nodes.paragraph,
-      render: component('./src/components/Paragraph.astro'),
+      render: component('./src/components/Text.astro'),
     },
     blockquote: {
       ...nodes.paragraph,
