@@ -1,6 +1,5 @@
 ---
 import Base from './Base.astro';
-import './BlogPost.css';
 
 interface Props {
   title: string;
@@ -13,7 +12,8 @@ const { title, slug } = Astro.props;
 <Base title={title}>
   <main>
     <h1 id={slug}>{title}</h1>
-    <article></article>
-    <slot />
+    <article>
+      <slot />
+    </article>
   </main>
 </Base>

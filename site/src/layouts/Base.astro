@@ -1,7 +1,7 @@
 ---
 import './reset.css';
 import './typography.css';
-import './Base.css';
+import { base, header, nav } from './Base.css';
 
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<html>
+<html class={base}>
   <head>
     <title>{title}</title>
     <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -21,6 +21,14 @@ const { title } = Astro.props;
     />
   </head>
   <body>
+    <header class={header}>
+      <a href='/'>Home</a>
+      <nav class={nav}>
+        <a href='https://www.twitter.com/askoufish'>Twitter</a>
+        <a href='https://www.github.com/askoufis'>GitHub</a>
+        <a href='/about-me'>About Me</a>
+      </nav>
+    </header>
     <slot />
   </body>
 </html>

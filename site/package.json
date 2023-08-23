@@ -16,7 +16,6 @@
     "deploy": "tsx ./scripts/deploy.ts"
   },
   "dependencies": {
-    "@askoufis/system": "workspace:*",
     "@astrojs/markdoc": "^0.4.4",
     "@astrojs/react": "^2.2.1",
     "astro": "^2.9.6",

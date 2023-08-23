@@ -1,17 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import BlogEntry from '../components/BlogEntry.astro';
+
 const blogEntries = (await getCollection('blog')).map((entry) => ({
   url: `/posts/${entry.slug}`,
-  name: entry.id,
+  title: entry.data.title,
 }));
 ---
 
-<h1 id='welcome'>Welcome to my website</h1>
-{
-  blogEntries.map((entry) => (
-    <>
-      <a href={entry.url}>{entry.name}</a>
-      <br />
-    </>
-  ))
-}
+<Base title='Adam Skoufis - Blog'>
+  <h1 id='blog'>Blog</h1>
+  {
+    blogEntries.map((entry) => (
+      <ul>
+        <BlogEntry url={entry.url}>{entry.title}</BlogEntry>
+      </ul>
+    ))
+  }
+</Base>

@@ -1,66 +1,9 @@
 import { globalFontFace, globalStyle } from '@vanilla-extract/css';
 
-import { createFontStack, createStyleObject } from '@capsizecss/core';
+import { createFontStack } from '@capsizecss/core';
 
 import openSansMetrics from '@capsizecss/metrics/openSans';
 import arialMetrics from '@capsizecss/metrics/arial';
-
-type TextElement = 'p' | 'h1' | 'h2' | 'h3' | 'h4';
-
-type FontProperties = {
-  fontSize: number;
-  lineGap: number;
-};
-
-type TextElementProperties = {
-  fontProperties: FontProperties;
-};
-
-const textElementProperties = {
-  p: {
-    fontProperties: {
-      fontSize: 18,
-      lineGap: 12,
-    },
-  },
-  h1: {
-    fontProperties: {
-      fontSize: 44,
-      lineGap: 18,
-    },
-  },
-  h2: {
-    fontProperties: {
-      fontSize: 32,
-      lineGap: 16,
-    },
-  },
-  h3: {
-    fontProperties: {
-      fontSize: 28,
-      lineGap: 14,
-    },
-  },
-  h4: {
-    fontProperties: {
-      fontSize: 24,
-      lineGap: 12,
-    },
-  },
-} satisfies Record<TextElement, TextElementProperties>;
-
-for (const [element, { fontProperties }] of Object.entries(
-  textElementProperties,
-)) {
-  const { fontSize, lineHeight, ...pseudos } = createStyleObject({
-    ...fontProperties,
-    fontMetrics: openSansMetrics,
-  });
-
-  globalStyle(element, { fontSize, lineHeight });
-  globalStyle(`${element}::before`, pseudos['::before']);
-  globalStyle(`${element}::after`, pseudos['::after']);
-}
 
 const { fontFamily, fontFaces } = createFontStack(
   [openSansMetrics, arialMetrics],
@@ -69,14 +12,34 @@ const { fontFamily, fontFaces } = createFontStack(
   },
 );
 
-globalStyle('p, h1, h2, h3, h4', {
+globalStyle('*', {
   fontFamily: `${fontFamily}, sans-serif`,
-});
-
-globalStyle('h1, h2, h3, h4', {
-  fontWeight: 'bold',
 });
 
 fontFaces.forEach((face) =>
   globalFontFace(face['@font-face'].fontFamily, face['@font-face']),
 );
+
+globalStyle('a', { textDecoration: 'none', color: '#258099' });
+
+globalStyle('h1', {
+  fontSize: '3rem',
+});
+globalStyle('h2', {
+  fontSize: '2rem',
+});
+globalStyle('h3', {
+  fontSize: '1.5rem',
+});
+globalStyle('h4', {
+  fontSize: '1.2rem',
+});
+
+globalStyle('p', {
+  padding: '0.5em 0',
+});
+
+globalStyle('h1, h2, h3, h4', {
+  paddingTop: '1em',
+  paddingBottom: '0.5em',
+});

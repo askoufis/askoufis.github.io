@@ -24,39 +24,8 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
 
-  packages/system:
-    dependencies:
-      '@types/react':
-        specifier: ^18.0.17
-        version: 18.0.21
-      clsx:
-        specifier: ^2.0.0
-        version: 2.0.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-    devDependencies:
-      '@capsizecss/core':
-        specifier: ^3.1.1
-        version: 3.1.1
-      '@capsizecss/metrics':
-        specifier: ^1.2.0
-        version: 1.2.0
-      '@capsizecss/vanilla-extract':
-        specifier: ^1.0.0
-        version: 1.0.0(@vanilla-extract/css@1.12.0)
-      '@vanilla-extract/css':
-        specifier: ^1.12.0
-        version: 1.12.0
-      '@vanilla-extract/sprinkles':
-        specifier: ^1.6.1
-        version: 1.6.1(@vanilla-extract/css@1.12.0)
-
   site:
     dependencies:
-      '@askoufis/system':
-        specifier: workspace:*
-        version: link:../packages/system
       '@astrojs/markdoc':
         specifier: ^0.4.4
         version: 0.4.4(@types/react@18.0.21)(astro@2.9.6)(react@18.2.0)
@@ -1662,14 +1631,6 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: true
 
-  /@vanilla-extract/sprinkles@1.6.1(@vanilla-extract/css@1.12.0):
-    resolution: {integrity: sha512-N/RGKwGAAidBupZ436RpuweRQHEFGU+mvAqBo8PRMAjJEmHoPDttV8RObaMLrJHWLqvX+XUMinHUnD0hFRQISw==}
-    peerDependencies:
-      '@vanilla-extract/css': ^1.0.0
-    dependencies:
-      '@vanilla-extract/css': 1.12.0
-    dev: true
-
   /@vanilla-extract/vite-plugin@3.8.2(@types/node@20.4.5)(vite@4.4.6):
     resolution: {integrity: sha512-i0vpuBUoh10Obl0hJr0dWQa6M3Udu/irm4tnsg1lUze8DXTbv3ctHmVu/wrRZHKw1EzzW/v+nLoJJRvisApspQ==}
     peerDependencies:
@@ -2133,11 +2094,6 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
-    dev: false
-
-  /clsx@2.0.0:
-    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
-    engines: {node: '>=6'}
     dev: false
 
   /color-convert@1.9.3:
