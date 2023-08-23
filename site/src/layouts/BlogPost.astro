@@ -1,8 +1,6 @@
 ---
 import Base from './Base.astro';
-import Heading from '../components/Heading.astro';
-import { Box } from '@askoufis/system';
-import * as styles from './BlogPost.css';
+import './BlogPost.css';
 
 interface Props {
   title: string;
@@ -13,10 +11,9 @@ const { title, slug } = Astro.props;
 ---
 
 <Base title={title}>
-  <Box component='main' className={styles.main}>
-    <Heading level={1} id={slug}>{title}</Heading>
-    <Box component='article'>
-      <slot />
-    </Box>
-  </Box>
+  <main>
+    <h1 id={slug}>{title}</h1>
+    <article></article>
+    <slot />
+  </main>
 </Base>
