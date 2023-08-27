@@ -9,7 +9,11 @@ const blogEntries = (await getCollection('blog')).map((entry) => ({
 }));
 ---
 
-<Base title='Adam Skoufis - Blog'>
+<Base
+  title='Adam Skoufis - Blog'
+  description='My personal website'
+  type='website'
+>
   <h1 id='blog'>Blog</h1>
   {
     blogEntries.map((entry) => (

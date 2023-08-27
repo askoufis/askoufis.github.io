@@ -3,13 +3,14 @@ import Base from './Base.astro';
 
 interface Props {
   title: string;
+  description: string;
   slug: string;
 }
 
-const { title, slug } = Astro.props;
+const { title, description, slug } = Astro.props;
 ---
 
-<Base title={title}>
+<Base title={title} description={description} type='article'>
   <main>
     <h1 id={slug}>{title}</h1>
     <article>
