@@ -1,0 +1,35 @@
+---
+import * as styles from './Header.css';
+
+let menuState = 'closed';
+---
+
+<header class={styles.header}>
+  <a href='/'>Home</a>
+  <button class={styles.navButton} id='navButton' data-menu-state={menuState}>
+    <div class={styles.barContainer}>
+      <div class={styles.bar.large}></div>
+      <div class={styles.bar.medium}></div>
+      <div class={styles.bar.small}></div>
+    </div>
+  </button>
+  <nav class={styles.nav}>
+    <a href='https://www.twitter.com/askoufish'>Twitter</a>
+    <a href='https://www.github.com/askoufis'>GitHub</a>
+    <a href='/about-me'>About Me</a>
+  </nav>
+</header>
+
+<script>
+  const navButton = document.getElementById('navButton');
+
+  navButton?.addEventListener('click', () => {
+    const currentMenuState = navButton.dataset.menuState;
+
+    if (currentMenuState === 'closed') {
+      navButton.dataset.menuState = 'open';
+    } else {
+      navButton.dataset.menuState = 'closed';
+    }
+  });
+</script>

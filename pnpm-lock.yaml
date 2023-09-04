@@ -63,6 +63,9 @@ importers:
       '@vanilla-extract/css':
         specifier: ^1.12.0
         version: 1.12.0
+      '@vanilla-extract/css-utils':
+        specifier: ^0.1.3
+        version: 0.1.3
       '@vanilla-extract/vite-plugin':
         specifier: ^3.8.2
         version: 3.8.2(@types/node@20.4.5)(vite@4.4.6)
@@ -1582,6 +1585,10 @@ packages:
       '@babel/core': 7.22.9
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@vanilla-extract/css-utils@0.1.3:
+    resolution: {integrity: sha512-PZAcHROlgtCUGI2y0JntdNwvPwCNyeVnkQu6KTYKdmxBbK3w72XJUmLFYapfaFfgami4I9CTLnrJTPdtmS3gpw==}
     dev: true
 
   /@vanilla-extract/css@1.12.0:
